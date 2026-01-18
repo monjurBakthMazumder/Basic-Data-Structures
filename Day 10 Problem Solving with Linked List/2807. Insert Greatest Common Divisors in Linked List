@@ -1,0 +1,36 @@
+// Problem Link: https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* insertGreatestCommonDivisors(ListNode* head) {
+        ListNode* tmp = head;
+        while(tmp != NULL && tmp->next != NULL){
+            int firstValue = tmp->val;
+            int secondValue = tmp->next->val;
+            int divisor = 1 , count = firstValue;
+            if (firstValue > secondValue){
+                count = secondValue;
+            }
+            for(int i=2; i <= count; i++ ){
+                if(firstValue % i ==0 && secondValue % i ==0){
+                    divisor = i;
+                }
+            }
+            ListNode* newNode = new ListNode(divisor);
+            newNode->next = tmp->next;
+            tmp->next = newNode;
+            tmp= newNode->next;
+        }
+        return head;
+    }
+};

@@ -1,0 +1,26 @@
+ // Problem Link: https://leetcode.com/problems/partition-array-according-to-given-pivot/
+
+ class Solution {
+public:
+    vector<int> pivotArray(vector<int>& nums, int pivot) {
+        int n = nums.size();
+        vector<int> v;
+        int prev_pivot_idx = 0;
+        int pivot_idx = 0;
+        for (int i = 0; i < n; i++) {
+            if(nums[i] > pivot){
+                v.push_back(nums[i]); 
+            }
+             if(nums[i] < pivot){
+                v.insert(v.begin() + prev_pivot_idx,nums[i]); 
+                prev_pivot_idx++;
+                pivot_idx++;
+            }
+             if(nums[i] == pivot){
+                v.insert(v.begin() + pivot_idx,nums[i]); 
+                pivot_idx++;
+            }
+        }
+        return v;
+    }
+};
