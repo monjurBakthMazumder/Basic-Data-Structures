@@ -17,13 +17,20 @@ public:
 
 void inOrder(Node *root)
 {
+    // Base Case: If the node is empty, go back
     if (root == NULL)
     {
         return;
     }
-    inOrder(root->left);     // lest
-    cout << root->val << " "; // root
-    inOrder(root->right);    // right
+
+    // 1. Visit the LEFT subtree completely
+    inOrder(root->left); 
+
+    // 2. Visit the ROOT (print the value)
+    cout << root->val << " "; 
+
+    // 3. Visit the RIGHT subtree
+    inOrder(root->right); 
 }
 
 int main()
