@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,18 +24,27 @@ int main()
     a->next = b;
     b->next = c;
 
-    // cout << head->val << endl;
-    // cout << head->next->val << endl;
-    // cout << head->next->next->val << endl;
-    // cout << head->next->next->next->val << endl;
-
+    // 1. Why use 'temp'?
+    // 'head' is the most important pointer. If we move 'head', 
+    // we lose the start of our list forever! 
+    // We create a 'temp' (temporary) pointer to do the walking for us.
     Node *temp = head;
+
+    // 2. The Traversal Loop
+    // 'while (temp)' is shorthand for 'while (temp != NULL)'.
+    // It keeps running as long as 'temp' is pointing to a real node.
     while (temp)
     {
-        cout << temp->val << endl;
-        temp = temp->next;
+        cout << temp->val << endl; // Print the current node's value
+        
+        // Move to the next node:
+        // temp now stores the address of the next node in the chain.
+        temp = temp->next; 
     }
 
+    // 3. Re-traversing
+    // Once the first loop finishes, 'temp' is NULL. 
+    // To print the list again, we just reset a new pointer to 'head'.
     Node *temp2 = head;
     while (temp2)
     {
