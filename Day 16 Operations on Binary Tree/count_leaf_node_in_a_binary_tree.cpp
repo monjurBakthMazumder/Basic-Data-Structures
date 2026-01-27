@@ -74,22 +74,29 @@ Node *input_tree()
     }
     return root;
 }
-
 int count_leaf_nodes(Node *root)
 {
+    // 1. Base Case: If the node is NULL, it's not a leaf (return 0)
     if (!root)
     {
         return 0;
     }
+
+    // 2. Leaf Condition: If both children are NULL, we found a leaf!
+    // We return 1 to represent this specific leaf node.
     if (!root->left && !root->right)
     {
         return 1;
     }
+
+    // 3. Recursive Step: If it's not a leaf, ask the children.
+    // Go down the left branch and the right branch.
     int l = count_leaf_nodes(root->left);
     int r = count_leaf_nodes(root->right);
+
+    // Sum up all the leaves found in the subtrees.
     return l + r;
 }
-
 int main()
 {
     Node *root = input_tree();

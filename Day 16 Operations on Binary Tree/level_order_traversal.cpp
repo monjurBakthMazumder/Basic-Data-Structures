@@ -18,20 +18,23 @@ public:
 void level_Order(Node *root)
 {
     if (!root)
-    {
-        cout << "No Tree";
         return;
-    }
+
+    // 1. Create a Queue to store pointers to nodes
     queue<Node *> q;
-    q.push(root);
+    q.push(root); // Start with the Root
+
     while (!q.empty())
     {
-        // 1. ber kore ana
+        // A. Remove the node from the front of the queue
         Node *f = q.front();
         q.pop();
-        // 2. oi node ke niya kaj kora
+
+        // B. Process the node (Print its value)
         cout << f->val << " ";
-        // 3. children push kora
+
+        // C. Add the children to the back of the queue
+        // They will wait their turn until the current level is finished.
         if (f->left)
             q.push(f->left);
         if (f->right)

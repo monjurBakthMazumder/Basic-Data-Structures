@@ -77,17 +77,25 @@ Node *input_tree()
 
 int max_height(Node *root)
 {
+    // 1. Base Case: An empty tree has no height.
     if (!root)
     {
         return 0;
     }
+
+    // 2. Leaf Case: A single node (leaf) has a height of 0.
+    // (Note: Some definitions say height is 1, but usually edges are counted).
     if (!root->left && !root->right)
     {
         return 0;
     }
+
+    // 3. Recursive Step: Get heights of left and right subtrees.
     int l = max_height(root->left);
     int r = max_height(root->right);
-    return max(l, r) +1;
+
+    // 4. Return the maximum of the two + 1 for the current level.
+    return max(l, r) + 1;
 }
 
 int main()

@@ -77,15 +77,22 @@ Node *input_tree()
 
 int count_nodes(Node *root)
 {
+    // 1. Base Case: If the node is NULL, it doesn't exist.
+    // We return 0 because there is nothing to count here.
     if (!root)
     {
         return 0;
     }
+
+    // 2. Recursive Step: Count the children
+    // Go all the way down the left and right subtrees.
     int l = count_nodes(root->left);
     int r = count_nodes(root->right);
+
+    // 3. The "Plus One" Rule
+    // We add the left count + right count + 1 (the current node).
     return l + r + 1;
 }
-
 int main()
 {
     Node *root = input_tree();
