@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Node
 {
 public:
@@ -19,48 +20,42 @@ public:
     Node *tail = NULL;
     int sz = 0;
 
-    void push(int val) // O(1)
+    // 1. PUSH: Adding to the back
+    void push(int val)
     {
         sz++;
         Node *newNode = new Node(val);
         if (head == NULL)
-        {
-            head = newNode;
-            tail = newNode;
+        { // First item in queue
+            head = tail = newNode;
             return;
         }
-        tail->next = newNode;
-        tail = newNode;
+        tail->next = newNode; // Old tail points to new node
+        tail = newNode;       // New node becomes the new tail
     }
 
-    void pop() // O(1)
+    // 2. POP: Removing from the front
+    void pop()
     {
         sz--;
         Node *deleteNode = head;
-        head = head->next;
-        delete deleteNode;
+        head = head->next; // The second person is now the front
+        delete deleteNode; // Free the memory of the old front
+
+        // If the queue is now empty, reset tail to NULL
         if (head == NULL)
         {
             tail = NULL;
         }
     }
 
-    int front() // O(1)
-    {
-        return head->val;
-    }
-    int back() // O(1)
-    {
-        return tail->val;
-    }
-    int size() // O(1)
-    {
-        return sz;
-    }
-    int empty() // O(1)
-    {
-        return head == NULL;
-    }
+    // 3. FRONT/BACK: Peek at the ends
+    int front() { return head->val; }
+    int back() { return tail->val; }
+
+    // 4. SIZE/EMPTY
+    int size() { return sz; }
+    bool empty() { return head == NULL; }
 };
 
 int main()
