@@ -37,17 +37,27 @@ void print_backward(Node *tail)
 void insert_at_any_position(Node *&head, int idx, int val)
 {
     Node *newNode = new Node(val);
-
     Node *temp = head;
 
+    // 1. Traverse to the node JUST BEFORE the target index
     for (int i = 1; i < idx; i++)
     {
         temp = temp->next;
     }
+
+    // 2. The Four-Way Connection
+    // Step A: New Node points forward to the original 'next' node
     newNode->next = temp->next;
+    
+    // Step B: New Node points backward to 'temp'
     newNode->prev = temp;
 
-    temp->next->prev = newNode;
+    // Step C: The node originally ahead of temp now points its 'prev' to New Node
+    if (temp->next != NULL) {
+        temp->next->prev = newNode;
+    }
+    
+    // Step D: 'temp' points its 'next' to New Node
     temp->next = newNode;
 }
 

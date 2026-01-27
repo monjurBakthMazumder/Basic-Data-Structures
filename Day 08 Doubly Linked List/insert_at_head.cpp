@@ -37,14 +37,26 @@ void print_backward(Node *tail)
 void insert_at_head(Node *&head, Node *&tail, int val)
 {
     Node *newNode = new Node(val);
+
+    // 1. Edge Case: Empty List
+    // If the list is empty, the new node is both the head and the tail.
     if (head == NULL)
     {
         head = newNode;
         tail = newNode;
         return;
     }
+
+    // 2. Forward Link
+    // New node's next points to the current head.
     newNode->next = head;
+
+    // 3. Backward Link (The crucial step for Doubly Linked Lists)
+    // The current head's prev must point back to our new node.
     head->prev = newNode;
+
+    // 4. Update the Head
+    // Move the 'head' pointer to our new node.
     head = newNode;
 }
 
