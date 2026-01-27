@@ -37,15 +37,26 @@ void print_linked_list(Node *head)
 };
 void reverse_linked_list(Node *&head, Node *&tail, Node *tamp)
 {
+    // 1. Base Case: If we reach the last node...
     if (tamp->next == NULL)
     {
-        head = tamp;
+        head = tamp; // The original last node is now our new Head!
         return;
     }
+
+    // 2. Recursive Call: Keep going until we hit the end
     reverse_linked_list(head, tail, tamp->next);
-    // code
-    tamp->next->next = tamp;
+
+    // 3. The "U-Turn" Logic (Executes as we come back)
+    // tamp->next is the 'child' node.
+    // tamp->next->next = tamp; means the child now points back to the parent.
+    tamp->next->next = tamp; 
+
+    // 4. Break the old forward link to prevent a cycle
     tamp->next = NULL;
+
+    // 5. Update the Tail
+    // Since the recursion finishes at the original head, it becomes the new tail.
     tail = tamp;
 };
 

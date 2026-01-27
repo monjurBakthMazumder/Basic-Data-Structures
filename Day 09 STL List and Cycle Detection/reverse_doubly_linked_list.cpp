@@ -50,8 +50,11 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
 
 void reverse_doubly(Node *head, Node *tail)
 {
+    // i starts at head, j starts at tail
+    // i moves next (forward), j moves prev (backward)
     for (Node *i = head, *j = tail; i != j && i->prev != j; i = i->next, j = j->prev)
     {
+        // Swap the numbers inside the nodes
         swap(i->val, j->val);
     }
 }
