@@ -20,13 +20,14 @@ class myStack
 public:
     Node *head = NULL;
     Node *tail = NULL;
-    int sz = 0;
+    int sz = 0; // We keep a counter so size() is O(1) instead of O(n)
 
+    // 1. PUSH: Add to the tail (The Top of the stack)
     void push(int val) // O(1)
     {
         sz++;
         Node *newNode = new Node(val);
-        if (head == NULL)
+        if (head == NULL) // First plate in the stack
         {
             head = newNode;
             tail = newNode;
@@ -34,37 +35,34 @@ public:
         }
         tail->next = newNode;
         newNode->prev = tail;
-        tail = newNode;
+        tail = newNode; // The new node is now the new "Top"
     }
 
+    // 2. POP: Remove the tail
     void pop() // O(1)
     {
         sz--;
         Node *deleteNode = tail;
-        tail = tail->prev;
-        delete deleteNode;
-        if (tail == NULL)
+        tail = tail->prev; // Step back to the previous node
+        delete deleteNode;  // Free the memory
+        
+        if (tail == NULL) // If we just deleted the last node
         {
             head = NULL;
             return;
         }
-        tail->next = NULL;
+        tail->next = NULL; // The new tail shouldn't point to anything
     }
 
+    // 3. TOP: Look at the tail's value
     int top() // O(1)
     {
         return tail->val;
     }
 
-    int size() // O(1)
-    {
-        return sz  ;
-    }
-
-    bool empty() // O(1)
-    {
-        return head == NULL;
-    }
+    // 4. SIZE & EMPTY
+    int size() { return sz; }
+    bool empty() { return head == NULL; }
 };
 
 int main()
