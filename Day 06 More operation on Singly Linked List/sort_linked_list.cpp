@@ -38,12 +38,20 @@ void print_linked_list(Node *head)
 
 void sort_linked_list(Node *head)
 {
+    // 1. The Outer Loop (Pointer i)
+    // This pointer picks a node and compares it with everything after it.
+    // We stop at i->next != NULL because there's nothing to compare the last node with yet.
     for (Node *i = head; i->next != NULL; i = i->next)
     {
+        // 2. The Inner Loop (Pointer j)
+        // This pointer starts from the node right after 'i' and goes to the very end.
         for (Node *j = i->next; j != NULL; j = j->next)
         {
+            // 3. The Comparison
+            // If the value at 'i' is larger than 'j', they are in the wrong order.
             if (i->val > j->val)
             {
+                // We swap the DATA (values), not the physical nodes/pointers.
                 swap(i->val, j->val);
             }
         }

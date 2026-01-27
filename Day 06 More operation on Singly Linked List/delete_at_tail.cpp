@@ -36,16 +36,29 @@ void print_linked_list(Node *head)
     }
 };
 
-void delete_at_tail(Node *head, Node *tail, int idx)
+// Note: To truly update 'tail' in main, we should use Node *&tail
+void delete_at_tail(Node *head, Node *&tail, int idx)
 {
+    // 1. Traverse to the node just before the tail.
+    // In a standard delete_at_tail, we would walk until temp->next == tail.
     Node *tamp = head;
     for (int i = 1; i < idx; i++)
     {
         tamp = tamp->next;
     }
+
+    // 2. Identify the node to be deleted (the current tail).
     Node *deleteNode = tamp->next;
-    tamp->next = tamp->next->next;
+
+    // 3. The Bypass
+    // Set the second-to-last node's next to NULL.
+    tamp->next = tamp->next->next; // Since deleteNode was the tail, this becomes NULL.
+
+    // 4. Memory Cleanup
     delete deleteNode;
+
+    // 5. Update the Tail pointer
+    // This is vital! 'tail' must now point to the new last node (tamp).
     tail = tamp;
 }
 
@@ -65,6 +78,7 @@ int main()
         insert_at_tail(head, tail, val);
     }
 
+    // Assuming we know the index of the second-to-last node
     delete_at_tail(head, tail, 2);
     print_linked_list(head);
     return 0;
