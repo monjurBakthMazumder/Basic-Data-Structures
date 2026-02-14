@@ -1,0 +1,43 @@
+# Test input/output files
+input.txt
+output.txt
+
+output/
+
+# Compiled source files
+*.out
+*.o
+*.obj
+*.exe
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.a
+*.so
+*.dll
+*.dylib
+
+# Debug files
+*.dSYM/
+*.stackdump
+
+# Editor and OS files
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Build and binary folders
+/build/
+/bin/
+/debug/
+/release/
+
+# VS Code settings (optional)
+.vscode/
+
+# Competitive Programming Helper (CPH) files
+*.cph
