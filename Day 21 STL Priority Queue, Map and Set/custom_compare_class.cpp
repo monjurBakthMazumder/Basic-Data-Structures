@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// The data structure to hold student info
 class Student
 {
 public:
@@ -16,25 +17,33 @@ public:
     }
 };
 
+// The custom comparator class
 class cmp
 {
 public:
+    // Overloading the () operator makes this a "Functor"
     bool operator()(Student l, Student r)
     {
+        // Rule 1: Lower marks should come first (Min-Heap logic for marks)
         if(l.marks > r.marks){
-            return true;
+            return true; // "l" has lower priority, so "r" moves up
         }
         else if(l.marks < r.marks){
-            return false;
+            return false; // "l" has higher priority, stays up
         }
         else{
-            return l.roll > r.roll;
+            // Rule 2: If marks are tied, the student with the 
+            // smaller roll number should come first.
+            return l.roll > r.roll; 
         }
     }
 };
+
 int main()
 {
+    // Syntax: priority_queue<Type, Container, Comparator>
     priority_queue<Student, vector<Student>, cmp> pq;
+
     int n;
     cin >> n;
     for (int i = 0; i < n; i++)
@@ -43,16 +52,15 @@ int main()
         int roll, marks;
         cin >> name >> roll >> marks;
         Student obj(name, roll, marks);
-        pq.push(obj);
+        pq.push(obj); // O(log N)
     }
 
+    // Printing elements one by one
     while (!pq.empty())
     {
+        // .top() gives the student with the highest priority based on our 'cmp'
         cout << pq.top().roll << " " << pq.top().name << " " << pq.top().marks << endl;
-        pq.pop();
-    }
-    {
-        /* code */
+        pq.pop(); // O(log N)
     }
 
     return 0;
