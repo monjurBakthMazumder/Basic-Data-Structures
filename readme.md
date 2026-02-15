@@ -1,6 +1,6 @@
 # 💻 Basic Data Structures
 
-Welcome to the **Basic Data Structures Learning Repository**! This project is a comprehensive guide designed to take you from the fundamental concepts of time complexity to advanced tree structures and problem-solving techniques.
+Welcome to the **Basic Data Structures Learning Repository**! This project is a comprehensive guide designed to take you from the fundamental concepts of time complexity to advanced tree structures, priority queues, and competitive programming techniques.
 
 This repository follows a structured, day-by-day learning path, featuring theoretical explanations, implementation details, and practice contest materials.
 
@@ -20,7 +20,10 @@ This repository follows a structured, day-by-day learning path, featuring theore
 | **Day 14: Test 02**                      | Second assessment covering linked lists, stacks, and queues.                          |
 | **Day 15 - 17: Binary Trees**            | Tree traversals, basic operations, and algorithmic problem solving using trees.       |
 | **Day 18: Test 03**                      | Third assessment focused on hierarchical data structures.                             |
-| **Contests & Practice**                  | Contains Grand Contests, Weekly Practice Problems, and XPSC materials.                |
+| **Day 19: Binary Search Tree**           | Specialized trees for optimized searching, insertion, and deletion.                   |
+| **Day 20: Heap Implementation**          | Building Max-Heaps and Min-Heaps from scratch.                                        |
+| **Day 21: STL Priority Queue, Map, Set** | Using advanced STL containers for logarithmic time operations and key-value storage.  |
+| **Contests & Practice**                  | Grand Contests (Selection/Semi-Final), XPSC, and Weekly Practice Problem sets.        |
 
 ---
 
@@ -28,33 +31,31 @@ This repository follows a structured, day-by-day learning path, featuring theore
 
 ### 🔹 **Complexity Analysis**
 
-- How to measure code efficiency using Time and Space complexity.
+- How to measure code efficiency using Time and Space complexity (, , etc.).
 
 ### 🔹 **Linear Data Structures**
 
 - **Vectors:** Mastering the STL `vector` for dynamic data management.
-- **Linked Lists:** Building Singly and Doubly Linked Lists from scratch and using STL `list`.
-- **Stacks & Queues:** Understanding the mechanics of LIFO and FIFO.
+- **Linked Lists:** Building Singly and Doubly Linked Lists; Cycle Detection (Floyd's Algorithm).
+- **Stacks & Queues:** Understanding LIFO/FIFO mechanics and manual implementation.
 
-### 🔹 **Hierarchical Data Structures**
+### 🔹 **Hierarchical & Advanced Structures**
 
-- **Binary Trees:** Learning how to structure, traverse, and manipulate tree-based data.
-
-### 🔹 **Algorithm Techniques**
-
-- Binary Search for optimized searching.
-- Prefix Sum for rapid range calculations.
-- Cycle Detection in linked structures.
+- **Binary Trees:** Structure, Traversal (Pre/In/Post/Level Order), and manipulation.
+- **Binary Search Trees (BST):** Efficient searching and BST properties.
+- **Heaps & Priority Queues:** Efficiently finding the min/max element in a collection.
+- **Maps & Sets:** Handling unique elements and key-value pairs using Balanced BSTs/Hashing.
 
 ### 🔹 **Competitive Programming Prep**
 
-- Practice through grand contests and specialized problem-solving folders (XPSC).
+- **XPSC & Road to XPSC:** Specialized practice for competitive programming.
+- **Contest Materials:** Selection rounds and semi-final round problem sets.
 
 ---
 
 ## 🎯 Goals of This Repository
 
-- Transition from basic C++ to advanced **Data Structure & Algorithm (DSA)** concepts.
+- Transition from basic C++ to professional **Data Structure & Algorithm (DSA)** mastery.
 - Provide **clean, well-commented code** for every structure.
 - Prepare for technical interviews and competitive programming contests.
 
@@ -62,8 +63,8 @@ This repository follows a structured, day-by-day learning path, featuring theore
 
 ## 📌 Usage
 
-- Each folder contains relevant source code and logic.
-- It is recommended to follow the days in order to build a consistent mental model of the topics.
+- Each folder contains relevant source code (`.cpp` files) and logic.
+- Follow the days in order to build a consistent mental model of the topics.
 
 ---
 
