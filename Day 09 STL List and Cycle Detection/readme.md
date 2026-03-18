@@ -1,12 +1,9 @@
-
 ---
-
 # 🔗 STL List & Linked List Operations in C++
 
 This repository contains **C++ programs demonstrating STL `list` operations**, as well as **custom linked list implementations** including **cycle detection** and **reversal of singly and doubly linked lists**.
 
 The content is **beginner-friendly**, with detailed explanations and examples for each concept.
-
 ---
 
 ## 📝 Summary of Contents
@@ -40,7 +37,7 @@ list<int> l5(l4);        // Copy constructor
 
 **Time Complexity:**
 
-* Construction: `O(n)` if initializing with n elements
+- Construction: `O(n)` if initializing with n elements
   **Space Complexity:** `O(n)`
 
 ---
@@ -64,7 +61,7 @@ l.clear();                     // Deletes all elements
 list<int> l = {10, 20, 30};
 cout << l.front() << endl;          // First element
 cout << l.back() << endl;           // Last element
-auto it = l.begin();                
+auto it = l.begin();
 cout << *next(it,1) << endl;        // Element at index 1
 ```
 
@@ -102,8 +99,8 @@ l.reverse();               // Reverse the list
 
 **Algorithm:** Floyd’s Tortoise and Hare
 
-* Uses **two pointers**: slow moves 1 step, fast moves 2 steps.
-* If there’s a cycle, **slow and fast will meet**.
+- Uses **two pointers**: slow moves 1 step, fast moves 2 steps.
+- If there’s a cycle, **slow and fast will meet**.
 
 ```cpp
 Node *slow = head, *fast = head;
@@ -160,10 +157,10 @@ for(Node *i=head, *j=tail; i!=j && i->prev!=j; i=i->next, j=j->prev){
 
 ## ✅ Key Takeaways for Beginners
 
-* **STL `list`**: Dynamic, doubly-linked structure with easy operations.
-* **Cycle detection**: Always check for loops in linked lists to avoid infinite traversals.
-* **Reversal**: Singly linked lists can be reversed recursively, doubly linked lists can be reversed by swapping or re-linking.
-* **Iterators**: STL list uses iterators, not index-based access like arrays.
+- **STL `list`**: Dynamic, doubly-linked structure with easy operations.
+- **Cycle detection**: Always check for loops in linked lists to avoid infinite traversals.
+- **Reversal**: Singly linked lists can be reversed recursively, doubly linked lists can be reversed by swapping or re-linking.
+- **Iterators**: STL list uses iterators, not index-based access like arrays.
 
 ---
 
@@ -187,18 +184,13 @@ int main(){
 
 ---
 
-
 # Author
 
-**Md Monjur Bakth Mazumder**  
-**Software Engineer | Lead Frontend Developer**
+**Engr. Md Monjur Bakth Mazumder**
 
-Software Engineer & Lead Frontend Developer at [Qrinux](https://www.qrinux.com/)  
-Software Engineer & Lead Frontend Developer at [Boom Box E-Solutions](https://www.boomboxesolutions.com/)
+🎓 Diploma in Computer Technology — [Moulvibazar Polytechnic Institute](https://mpi.moulvibazar.gov.bd/)  
+🎓 BSc in CSE (Running) — [Sylhet International University](https://siu.edu.bd/)
 
-📧 [Email me](mailto:md.monjurmbm2001@gmail.com)  
-🌐 [Portfolio](https://mdmonjurbakthmazumder.netlify.app)
-
-Passionate about building clean, maintainable, and scalable applications
+📧 Email: monjurmbm404@gmail.com
 
 ### ⭐ If you find this helpful, don’t forget to **star** the repository!
