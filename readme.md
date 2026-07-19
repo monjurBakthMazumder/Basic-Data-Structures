@@ -68,6 +68,11 @@ This repository follows a structured, day-by-day learning path, featuring theore
 
 ---
 
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
 
 # Author
 
