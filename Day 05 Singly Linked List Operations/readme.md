@@ -330,13 +330,38 @@ g++ refference_of_a_pointer.cpp -o pointer_reference && ./pointer_reference
 
 
 
+
 # Author
 
-**Engr. Md Monjur Bakth Mazumder**
+## **Engr. Md Monjur Bakth Mazumder**
 
-🎓 Diploma in Computer Science and Technology — [Moulvibazar Polytechnic Institute](https://mpi.moulvibazar.gov.bd/)  
-🎓 BSc in Computer Science & Engineering (CSE) (Ongoing) — [Sylhet International University](https://siu.edu.bd/)
+🎓 **Secondary School Certificate (SSC) from [Shah Helal High School](https://www.shahhelalhs.edu.bd/)**
 
-📧 Email: monjurmbm404@gmail.com
+🎓 **Diploma in Computer Science and Technology from [Moulvibazar Polytechnic Institute (MPI)](https://mpi.moulvibazar.gov.bd/)**
 
-### ⭐ If you find this helpful, don’t forget to **star** the repository!
+🎓 **BSc in Computer Science & Engineering (CSE)** _(Ongoing)_ **at [Sylhet International University (SIU)](https://siu.edu.bd/)**
+
+📧 **Email:** monjurmbm404@gmail.com
+
+---
+
+## ⭐ Support the Project
+
+If you found this repository helpful, please consider giving it a **⭐ Star**. It helps others discover the project and motivates future development.
+
+---
+
+## 🌐 Connect with Me
+
+| Platform       | Link                                        |
+| -------------- | ------------------------------------------- |
+| 💻 GitHub      | https://github.com/monjurmbm404             |
+| 💼 LinkedIn    | https://linkedin.com/in/monjurmbm404        |
+| 🧩 LeetCode    | https://leetcode.com/u/monjurmbm404         |
+| ⚔️ Codeforces  | https://codeforces.com/profile/monjurmbm404 |
+| 🍽️ CodeChef    | https://www.codechef.com/users/monjurmbm404 |
+| 🏆 VJudge      | https://vjudge.net/user/monjurmbm404        |
+| 📘 Facebook    | https://www.facebook.com/monjurmbm404       |
+| 🐦 X (Twitter) | https://x.com/monjurmbm404                  |
+| ▶️ YouTube     | https://youtube.com/@monjurmbm404           |
+| ✍️ Medium      | https://medium.com/@monjurmbm404            |
